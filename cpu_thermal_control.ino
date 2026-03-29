@@ -11,7 +11,7 @@ void setup() {
   Serial.begin(9600);
   sensors.begin();
   pinMode(BUZZER, OUTPUT);
-  noTone(BUZZER);  // Ensure the buzzer is off initially
+  noTone(BUZZER);  
 }
 
 void loop() {
@@ -24,9 +24,9 @@ void loop() {
     Serial.println(" °C");
 
     if (tempC > 34.0) {
-      tone(BUZZER, 1000, 500); // 1000 Hz (Lower volume & tone), 500ms duration
+      tone(BUZZER, 1000, 500); 
     } else {
-      noTone(BUZZER); // Stop buzzer
+      noTone(BUZZER); 
     }
   } else {
     Serial.println("Error: Sensor not found!");
